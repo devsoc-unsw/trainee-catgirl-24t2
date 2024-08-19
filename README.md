@@ -17,15 +17,13 @@ Welcome to the Catgirl Group Finder! This open-source project aims to help you f
 
 Before you begin, ensure you have met the following requirements:
 
-- [Node.js](https://nodejs.org/) installed
-- [MongoDB](https://www.mongodb.com/) set up for the database
-- [npm](https://www.npmjs.com/) package manager
+- [Bun](https://bun.sh/) installed
 
 ### Installation
 
 1. Clone the repository
     ```sh
-    git clone https://github.com/yourusername/catgirl-group-finder.git
+    git clone https://github.com/devsoc-unsw/catgirl-group-finder.git
     ```
 
 2. Navigate to the project directory
@@ -35,18 +33,12 @@ Before you begin, ensure you have met the following requirements:
 
 3. Install the dependencies
     ```sh
-    npm install
+    bun install
     ```
 
-4. Set up your environment variables. Create a `.env` file in the root directory and add the following:
-    ```
-    MONGODB_URI=your_mongodb_uri
-    JWT_SECRET=your_jwt_secret
-    ```
-
-5. Start the development server
+4. Start the development server
     ```sh
-    npm start
+    bun start
     ```
 
 ## Usage
