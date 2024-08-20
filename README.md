@@ -76,5 +76,3 @@ This project is licensed under the MIT License. See the [LICENSE](LICENSE) file 
 If you have any questions or suggestions, feel free to open an issue or contact us at [email@example.com](mailto:email@example.com).
 
 Happy catgirl group finding! 🐱
-
-hi i changed this
