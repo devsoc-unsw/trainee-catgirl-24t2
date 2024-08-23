@@ -10,9 +10,10 @@ const userLog = async (req: Request, res: Response, next: Function) => {
 }
 router.use(userLog);
 
-// Skeleton authentication function. Should match the user's password hash 
+// TODO: Move this to its own file.
+// TODO: Figure out how this function should handle user not found.
+// Skeleton authentication function. Match the user's password hash 
 // against the hash stored in the database, then return a JWT or error.
-// Figure out how this function should handle user not found.
 async function authenticate(username: string, password: string) {
   const user = ["bob@bob.com", "aAasihfAIFUBasfbB"]; // await db.query();
 
