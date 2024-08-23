@@ -5,7 +5,7 @@ import { users } from './model/user';
 import { eq } from 'drizzle-orm';
 
 // Routes
-const userRoute = require('./routes/userRoutes');
+const userRoute = require('./routes/userRoute');
 
 // DB stuff
 const sqlite = new Database('sqlite.db');
