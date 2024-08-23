@@ -4,6 +4,9 @@ import { Database } from 'bun:sqlite';
 import { users } from './model/user';
 import { eq } from 'drizzle-orm';
 
+// Routes
+const userRoute = require('./routes/userRoutes');
+
 // DB stuff
 const sqlite = new Database('sqlite.db');
 const db = drizzle(sqlite);
@@ -34,45 +37,13 @@ const port = 3000;
 // Parse incoming JSON data.
 app.use(express.json());
 
+// TODO: Move all user functions to /user/.. ?
+app.use('/', userRoute);
+
 // TODO: Remove this later?
 app.get('/', async (req: Request, res: Response) => {
   res.send('Hello, Bun!');
 });
-
-
-app.post('/login', async (req: Request, res: Response) => {
-  // username and email are the same.
-  let {username, password} = req.body;
-
-  // Check if the username exists
-
-  // Check if the password matches the existing username
-  // Need to implement some form of password hashing later for security.
-
-  // Return a token.
-
-});
-
-app.post('/register', async (req: Request, res: Response) => {
-  let {username, password} = req.body;
-
-  // Check if the user exists in the database
-
-  // Insert the user into the database
-
-});
-
-app.delete('/delete', async (req: Request, res: Response) => {
-  let {username, password} = req.body;
-
-  // Check if the user exists in the database.
-
-  // Check if the password matches the given user.
-
-  // Delete the user from the database.
-
-});
-
 
 app.listen(port, () => {
   console.log(`Server is running on port http://localhost:${port}`);
