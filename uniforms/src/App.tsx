@@ -6,6 +6,7 @@ import ReactDOM from "react-dom/client";
 import { BrowserRouter, Routes, Route } from "react-router-dom";
 import Forms from "./pages/Forms"
 import Settings from "./pages/Settings"
+import ViewForms from "./pages/ViewForms"
 
 function App() { 
   return (
@@ -13,6 +14,7 @@ function App() {
 	<Routes>
 	  <Route path="forms" element={<Forms />} />
     <Route path="settings" element={<Settings />} />
+    <Route path="viewforms" element={<ViewForms />} />
 	</Routes>
      </BrowserRouter>
   );
