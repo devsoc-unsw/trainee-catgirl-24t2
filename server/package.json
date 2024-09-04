@@ -5,7 +5,7 @@
   "scripts": {
     "serve": "bun run src/index.ts",
     "lint": "prettier --write ./**/*.{js,jsx,ts,tsx,css,md,json} --config ../common/.prettierrc",
-    "clear-db": "rm sqlite.db && bun run src/db.ts"
+    "clear-db": "rm sqlite.db 2>/dev/null; bun run src/db.ts"
   },
   "devDependencies": {
     "@types/axios": "^0.14.0",

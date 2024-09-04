@@ -1,10 +1,12 @@
-import axios, { Axios, AxiosError } from 'axios';
+import axios from 'axios';
 import { expect, test } from 'bun:test';
 import { base } from './common';
 
 test('authentication', async () => {
-  // Database should be empty before running this test
-  // i.e., `bun run clear-db && bun run serve`
+  expect(axios.post(`${base}/dev/clear`)).resolves.toHaveProperty(
+    'status',
+    200
+  );
 
   expect(
     axios.post(`${base}/authentication`, {

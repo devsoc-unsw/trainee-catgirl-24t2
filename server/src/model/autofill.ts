@@ -4,10 +4,10 @@ import { sql } from 'drizzle-orm';
 
 export const autofills = sqliteTable('autofills', {
   id: integer('id', { mode: 'number' }).primaryKey({ autoIncrement: true }),
-  userId: text('user_id')
+  userId: integer('user_id')
     .notNull()
     .references(() => users.id, { onDelete: 'cascade' }),
-  key: text('title').notNull(),
+  field: text('field').notNull(),
   value: text('value').notNull(),
   createdAt: integer('created_at', { mode: 'timestamp' })
     .notNull()
