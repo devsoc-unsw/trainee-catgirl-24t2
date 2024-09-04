@@ -11,10 +11,10 @@ function Email() {
     <CentredDiv>
         <SettingsTitleDiv text="Email" prev="../settings/user/account"/>
         <SettingsBodyDiv>
-            <Input className="w-[80%] h-[10%]" type="email" placeholder="Your email here!"/>
-            {/*Error message, only displays if invalid input*/}
-            <p className="w-[80%] text-destructive">Please provide a valid email..</p>
             <p className="w-[80%]">You must have an email linked to your account.</p>
+            <Input className="w-[80%] h-[10%] peer" type="email" placeholder="Your email here!"/>
+            {/*Error message, only displays if invalid input*/}
+            <p className="w-[80%] text-destructive invisible peer-invalid:visible">Please provide a valid email.</p>
         </SettingsBodyDiv>
         <SettingsSave/>
     </CentredDiv>

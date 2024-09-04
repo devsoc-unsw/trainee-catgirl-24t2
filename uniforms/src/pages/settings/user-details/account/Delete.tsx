@@ -1,6 +1,7 @@
 import { CentredDiv } from "@/components/ui/centred-div"
 import { SettingsTitleDiv } from "@/components/ui/settings/settings-title-div"
 import { SettingsBodyDiv } from "@/components/ui/settings/settings-body-div"
+import { Button } from "@/components/ui/button"
 
 function AccountSettings() {
     return (
@@ -14,6 +15,8 @@ function AccountSettings() {
             <p className="w-[80%]">If you are a member, moderator or administrator of a society, you and any permissions you have will be automatically removed from that society.</p>
             <p className="w-[80%] text-destructive">Deleting your account is an irreversible action.</p>
         </SettingsBodyDiv>
+    {/*TODO: make the destructive button popup a prompt that requires entering your password to delete*/}
+    <Button variant="destructive" className="mb-[5%]">Delete account</Button>
     </CentredDiv>
     </>
     )

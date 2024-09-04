@@ -8,7 +8,7 @@ function Settings() {
     {/*Logo & nav bar should go up at the top!!!*/}
         <CentredDiv>
             <SettingsBodyDiv>
-                <h1 className= "pt-[2%] text-center">Settings</h1>
+                <h1 className= "pt-[5%] text-center">Settings</h1>
                 <SettingsNext text={"User details"} next={"user"}/>
                 <SettingsNext text={"Form autofill details"} next={"autofill"}/>
                 <h1 className= "text-center">Support</h1>

@@ -34,7 +34,7 @@ function App() {
     <Route path="settings/user/account/delete" element={<Delete />} />
     <Route path="settings/autofill" element={<FormAutofill />} />
     <Route path="settings/contact" element={<ContactUs />} />
-    <Route path="settings/faq" element={<Faq />} />
+    <Route path="settings/contact/faq" element={<Faq />} />
     <Route path="settings/about" element={<About />} />
 
     <Route path="viewforms" element={<ViewForms />} />

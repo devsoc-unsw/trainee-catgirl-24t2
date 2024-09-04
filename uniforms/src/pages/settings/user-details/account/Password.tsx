@@ -4,7 +4,13 @@ import { SettingsSave } from "@/components/ui/settings/settings-save"
 import { SettingsTitleDiv } from "@/components/ui/settings/settings-title-div"
 import { SettingsBodyDiv } from "@/components/ui/settings/settings-body-div"
 
+
+
 function Password() {
+    {/*TODO: create a fuction for error handling passwords 
+        - password is not valid (missing a character or something)
+        - new password is your current password
+    */}
     return (
     <>
     {/*Logo & nav bar should go up at the top!!!*/}
@@ -12,12 +18,11 @@ function Password() {
     <CentredDiv>
         <SettingsTitleDiv text="Password" prev="../settings/user/account"/>
         <SettingsBodyDiv>
-            <Input className="w-[80%] h-[10%]" type="password" placeholder="Enter current password"/>
-            <Input className="w-[80%] h-[10%]" type="password" placeholder="Enter new password"/>
-            {/*Error message, only displays if invalid input*/}
-            <p className="w-[80%] text-destructive">Your password was incorrect.</p>
             <p className="w-[80%]">Your password must be at least 8 characters long, contain at least one capital letter, one lower case letter and one symbol.</p>
-        </SettingsBodyDiv>
+            <Input className="w-[80%] h-[10%]" type="password" placeholder="Enter current password"/>
+            <Input className="w-[80%] h-[10%] peer" type="password" placeholder="Enter new password"/>
+            {/*Error message, only displays if invalid input*/}
+            <p className="w-[80%] text-destructive invisible peer-invalid:visible">Your password was incorrect.</p>        </SettingsBodyDiv>
         <SettingsSave/>
     </CentredDiv>
     </>

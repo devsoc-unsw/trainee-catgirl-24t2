@@ -2,10 +2,10 @@ import { Button } from "@/components/ui/button"
 
 const SettingsSave = () => {
     return (
-        <div className="flex justify-between align-center items-center w-[80%] h-[30%]">
+        <div className="flex flex-row-reverse justify-between align-center items-center w-[80%] h-[30%]">
             {/*Only displays if save changes button is clicked*/}
-            <p>Settings saved!</p>
-            <Button>Save changes</Button>
+            <Button className="peer">Save changes</Button>
+            <p className="invisible peer-saved:visible">Settings saved!</p>
         </div>
     )
 }
