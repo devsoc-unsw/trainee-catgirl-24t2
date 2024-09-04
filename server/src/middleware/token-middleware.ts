@@ -19,11 +19,11 @@ export async function requireToken(
     const decoded = verify(token, SECRET_KEY);
     const id: number = (decoded as JwtPayload).id;
     const matches = await db.select().from(users).where(eq(users.id, id));
-    if (matches.length == 0) {
+    if (matches.length != 1) {
       return res.status(403).send('Bad token');
     }
 
-    req.id = id;
+    req.body.__user__ = matches[0];
     next();
   } catch (erorr) {
     res.status(403).send('Bad token');
