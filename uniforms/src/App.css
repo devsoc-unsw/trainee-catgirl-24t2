@@ -6,8 +6,8 @@
   :root {
     --background: 38 22% 93%;
     --foreground: 0 0% 17%;
-    --card: 38 22% 93%;
-    --card-foreground: 0 0% 17%;
+    --card: 0 0% 70;
+    --card-foreground: 0 0% 0%;
     --popover: 38 22% 93%;
     --popover-foreground: 0 0% 17%;
     --primary: 341 80% 79%;
@@ -18,7 +18,7 @@
     --secondary-hover: 0 0% 76%;
     --muted: 136 0% 93%;
     --muted-foreground: 215.4 16.3% 46.9%;
-    --accent: 0 100% 89%;
+    --accent: 341 85% 88%;
     --accent-foreground: 222.2 47.4% 11.2%;
     --destructive: 356 64% 53%;
     --destructive-foreground: 210 40% 98%;
@@ -72,4 +72,39 @@
   body {
     @apply bg-background text-foreground;
   }
+}
+
+.hide-scrollbar::-webkit-scrollbar {
+  display: none;
+}
+
+.scale-bounce {
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.scale-bounce:hover {
+  transform: scale(1.05);
+  animation: bounce 0.5s ease;
+}
+
+@keyframes stretch {
+  from {
+    width: 260px;
+    height: 45px;
+  }
+  to {
+    max-width: 280px;
+    width: 280px;
+    height: 50px;
+  }
+}
+
+.scale-stretch {
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  width: 260px;
+  height: 45px;
+}
+
+.scale-stretch:hover {
+  animation: stretch 0.5s ease forwards;
 }
