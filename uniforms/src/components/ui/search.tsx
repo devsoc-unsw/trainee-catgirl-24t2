@@ -5,7 +5,7 @@ import { cn } from "@/lib/utils";
 
 export interface InputProps
   extends React.InputHTMLAttributes<HTMLInputElement> {
-  setState: (value: string) => string;
+  setState: React.Dispatch<React.SetStateAction<string>>;
 }
 
 const Search = React.forwardRef<HTMLInputElement, InputProps>(
