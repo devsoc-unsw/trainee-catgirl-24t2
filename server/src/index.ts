@@ -3,6 +3,11 @@ import { authentication } from './routes/authentication';
 import cors from 'cors';
 import { errorHandler } from './middleware/error-middleware';
 import 'express-async-errors';
+import { MODE } from './env';
+import { dev } from './routes/dev';
+import { society } from './routes/society';
+import { involvement } from './routes/involvements';
+import { form } from './routes/form';
 
 // Server stuff
 const app = express();
@@ -16,5 +21,11 @@ app.listen(port, () => {
 });
 
 app.use('/authentication', authentication);
+app.use('/society', society);
+app.use('/involvement', involvement);
+app.use('/form', form);
+if (MODE == 'dev') {
+  app.use('/dev', dev);
+}
 
 app.use(errorHandler);
