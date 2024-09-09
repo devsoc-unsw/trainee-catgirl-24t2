@@ -9,7 +9,7 @@ const Card: React.FC<CardProps> = ({ variant }) => {
     return variant === "d" ?
       <Button
         /* Professional Figma Dev Mode user*/
-        className="flex-grow flex flex-col justify-end items-center rounded-[20px] w-[20vw] max-w-[220px] h-[251px] scale-bounce"
+        className="flex-grow flex flex-col justify-end items-center rounded-[20px] w-[20vw] max-w-[220px] h-[251px] hover:animate-scale"
         style={{
           background: `linear-gradient(180deg, rgba(236, 230, 240, 0.00) 0%, #FDD6EB 75.5%), linear-gradient(0deg, rgba(0, 0, 0, 0.25) 0%, rgba(0, 0, 0, 0.25) 100%)`,
           border: 'none',
@@ -26,7 +26,7 @@ const Card: React.FC<CardProps> = ({ variant }) => {
     :
       /* set mobile card as default */
       <Button
-        className="flex flex-row justify-between items-center rounded-[20px] w-[80vh] max-w-[260px] h-[45px] scale-stretch"
+        className="flex flex-row justify-between items-center rounded-[20px] w-[80vh] max-w-[260px] h-[45px] hover:animate-stretch"
         style={{
           background: `linear-gradient(270deg, rgba(236, 230, 240, 0.00) 0%, #FDD6EB 75.5%), linear-gradient(90deg, rgba(0, 0, 0, 0.25) 0%, rgba(0, 0, 0, 0.25) 100%)`,
           border: 'none',

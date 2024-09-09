@@ -18,7 +18,7 @@
     --secondary-hover: 0 0% 76%;
     --muted: 136 0% 93%;
     --muted-foreground: 215.4 16.3% 46.9%;
-    --accent: 341 85% 88%;
+    --accent: 0 100% 89%;
     --accent-foreground: 222.2 47.4% 11.2%;
     --destructive: 356 64% 53%;
     --destructive-foreground: 210 40% 98%;
@@ -32,6 +32,7 @@
     --chart-3: 197 37% 24%;
     --chart-4: 43 74% 66%;
     --chart-5: 27 87% 67%;
+    --active: 341 85% 88%;
   }
 
   .dark {
@@ -76,35 +77,4 @@
 
 .hide-scrollbar::-webkit-scrollbar {
   display: none;
-}
-
-.scale-bounce {
-  transition: transform 0.3s ease, box-shadow 0.3s ease;
-}
-
-.scale-bounce:hover {
-  transform: scale(1.05);
-  animation: bounce 0.5s ease;
-}
-
-@keyframes stretch {
-  from {
-    width: 260px;
-    height: 45px;
-  }
-  to {
-    max-width: 280px;
-    width: 280px;
-    height: 50px;
-  }
-}
-
-.scale-stretch {
-  transition: transform 0.3s ease, box-shadow 0.3s ease;
-  width: 260px;
-  height: 45px;
-}
-
-.scale-stretch:hover {
-  animation: stretch 0.5s ease forwards;
 }

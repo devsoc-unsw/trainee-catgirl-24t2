@@ -10,8 +10,8 @@ interface NavBarProps {
 
 const NavBar: React.FC<NavBarProps> = ( {PageNum, variant} ) => {
 
-    const ButtonVariant = (index: number) => {
-        return index === PageNum ? "clicked" : "default";
+    const PageButton = (index: number) => {
+        return index === PageNum ? "active" : "default";
     };
 
     return variant === "d" ?
@@ -23,10 +23,10 @@ const NavBar: React.FC<NavBarProps> = ( {PageNum, variant} ) => {
 
             {/* Buttons to the center */}
             <div className="flex-grow flex flex-col justify-center items-center gap-[20px]">
-                <Button className="w-[160px] h-[60px] text-[16px]" variant={ButtonVariant(1)}>View Forms</Button>
-                <Button className="w-[160px] h-[60px] text-[16px]" variant={ButtonVariant(2)}>Societies</Button>
-                <Button className="w-[160px] h-[60px] text-[16px]" variant={ButtonVariant(3)}>Manage</Button>
-                <Button className="w-[160px] h-[60px] text-[16px]" variant={ButtonVariant(4)}>Settings</Button>
+                <Button className="w-[160px] h-[60px] text-[16px]" variant={PageButton(1)}>View Forms</Button>
+                <Button className="w-[160px] h-[60px] text-[16px]" variant={PageButton(2)}>Societies</Button>
+                <Button className="w-[160px] h-[60px] text-[16px]" variant={PageButton(3)}>Manage</Button>
+                <Button className="w-[160px] h-[60px] text-[16px]" variant={PageButton(4)}>Settings</Button>
             </div>
 
             {/* Bottom text and logout */}
@@ -46,10 +46,10 @@ const NavBar: React.FC<NavBarProps> = ( {PageNum, variant} ) => {
                 </div>
             </div>
             <div className="flex flex-col justify-center items-center">
-                <Button className="w-[360px] h-[60px] text-[16px] rounded-[0px]" variant={ButtonVariant(1)}>View Forms</Button>
-                <Button className="w-[360px] h-[60px] text-[16px] rounded-[0px]" variant={ButtonVariant(2)}>Societies</Button>
-                <Button className="w-[360px] h-[60px] text-[16px] rounded-[0px]" variant={ButtonVariant(3)}>Manage</Button>
-                <Button className="w-[360px] h-[60px] text-[16px] rounded-[0px]" variant={ButtonVariant(4)}>Settings</Button>
+                <Button className="w-[360px] h-[60px] text-[16px] rounded-[0px]" variant={PageButton(1)}>View Forms</Button>
+                <Button className="w-[360px] h-[60px] text-[16px] rounded-[0px]" variant={PageButton(2)}>Societies</Button>
+                <Button className="w-[360px] h-[60px] text-[16px] rounded-[0px]" variant={PageButton(3)}>Manage</Button>
+                <Button className="w-[360px] h-[60px] text-[16px] rounded-[0px]" variant={PageButton(4)}>Settings</Button>
             </div>
         </div>
 }
