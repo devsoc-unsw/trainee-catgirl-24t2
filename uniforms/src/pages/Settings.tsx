@@ -15,7 +15,7 @@ function Settings() {
                 <SettingsNext text={"Contact us"} next={"contact"}/>
                 <SettingsNext text={"About"} next={"about"}/>
             </SettingsBodyDiv>
-            <a href="#" className="h-[10%] text-primary hover:text-primary-hover">Log out</a>
+            <a href="#" className="h-[10%] text-foreground hover:text-black">Log out</a>
         </CentredDiv>
     </>
     )
