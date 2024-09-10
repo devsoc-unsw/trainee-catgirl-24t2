@@ -9,7 +9,7 @@ function Societies() {
     <>
     {isDesktop && 
         <Page type="main" variant="desktop" page={2}>
-            <Title text="Societies" prev=""/>
+            <Title text="Societies" type="title"/>
         </Page>
     }
     </>
