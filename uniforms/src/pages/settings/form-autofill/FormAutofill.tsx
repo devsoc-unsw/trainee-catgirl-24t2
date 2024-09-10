@@ -1,5 +1,5 @@
 import { CentredDiv } from "@/components/ui/centred-div"
-import { SettingsTitleDiv } from "@/components/ui/settings/settings-title-div"
+import { TitleDiv } from "@/components/ui/title-div"
 import { SettingsSave } from "@/components/ui/settings/settings-save"
 import { SettingsBodyDiv } from "@/components/ui/settings/settings-body-div"
 import { Input } from "@/components/ui/input"
@@ -10,7 +10,7 @@ function FormAutofill() {
     <>
     {/*Logo & nav bar should go up at the top!!!*/}
         <CentredDiv>
-            <SettingsTitleDiv text="Form autofill details" prev="../settings"/>
+            <TitleDiv text="Form autofill details" prev="../settings"/>
             <SettingsBodyDiv>
                 <p className="w-[80%]">Name</p>
                 <Input className="w-[80%] h-[10%]" type="name" placeholder="Your name here!"/>

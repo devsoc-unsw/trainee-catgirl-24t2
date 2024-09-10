@@ -3,6 +3,8 @@ import { SettingsNext } from "@/components/ui/settings/settings-next"
 import { SettingsBodyDiv } from "@/components/ui/settings/settings-body-div"
 import { screenDetector } from "@/utils/screenDetector"
 import { NavBar } from "@/components/ui/navbar"
+import { PageDiv } from "@/components/ui/page-div"
+import { TitleDiv } from "@/components/ui/title-div"
 
 
 function Settings() {
@@ -25,10 +27,9 @@ function Settings() {
         </CentredDiv>
     }
     {isDesktop && 
-        <div>
-            <NavBar PageNum={4} variant = "d"></NavBar>
-            <p>hallo</p>
-        </div>
+        <PageDiv type="main" variant="d" page={4}>
+            <TitleDiv text="Settings"prev=""/>
+        </PageDiv>
     }
     </>
     )
