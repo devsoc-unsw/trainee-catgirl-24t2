@@ -3,8 +3,8 @@ import { SettingsNext } from "@/components/ui/settings/settings-next"
 import { SettingsBodyDiv } from "@/components/ui/settings/settings-body-div"
 import { screenDetector } from "@/utils/screenDetector"
 import { NavBar } from "@/components/ui/navbar"
-import { PageDiv } from "@/components/ui/page-div"
-import { TitleDiv } from "@/components/ui/title-div"
+import { Page } from "@/components/ui/page"
+import { Title } from "@/components/ui/title"
 
 
 function Settings() {
@@ -14,7 +14,7 @@ function Settings() {
     {/*Logo & nav bar should go up at the top!!!*/}
     {isMobile && 
         <CentredDiv>
-            <NavBar PageNum={4} variant = "m"></NavBar>
+            <NavBar PageNum={4} variant = "mobile"></NavBar>
             <SettingsBodyDiv>
                 <h1 className= "pt-[5%] text-center">Settings</h1>
                 <SettingsNext text={"User details"} next={"user"}/>
@@ -27,9 +27,9 @@ function Settings() {
         </CentredDiv>
     }
     {isDesktop && 
-        <PageDiv type="main" variant="d" page={4}>
-            <TitleDiv text="Settings"prev=""/>
-        </PageDiv>
+        <Page type="main" variant="desktop" page={4}>
+            <Title text="Settings" prev=""/>
+        </Page>
     }
     </>
     )

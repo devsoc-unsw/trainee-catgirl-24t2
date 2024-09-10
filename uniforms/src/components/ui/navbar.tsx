@@ -14,7 +14,7 @@ const NavBar: React.FC<NavBarProps> = ( {PageNum, variant} ) => {
         return index === PageNum ? "active" : "default";
     };
 
-    return variant === "d" ?
+    return variant === "desktop" ?
         <div className="w-[20vw] h-[100vh] flex flex-col bg-primary p-[50px]">
             {/* Title at the top */}
             <div className="flex flex-col items-center gap-[50px]">

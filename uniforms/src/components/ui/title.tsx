@@ -2,7 +2,7 @@ import { ChevronLeft} from "lucide-react"
 import { Link } from "react-router-dom"
 import { Separator } from "./separator"
 
-const TitleDiv = ({ text, prev }: { text: string, prev: string }) => {
+const Title = ({ text, prev }: { text: string, prev: string }) => {
     if (prev == "") {
         return(
             <div className="mx-auto container pt-[50px]">
@@ -22,4 +22,4 @@ const TitleDiv = ({ text, prev }: { text: string, prev: string }) => {
 
 }
 
-export { TitleDiv }
+export { Title }

@@ -1,13 +1,13 @@
 import { CentredDiv } from "@/components/ui/centred-div"
 import { SettingsNext } from "@/components/ui/settings/settings-next"
-import { TitleDiv } from "@/components/ui/title-div"
+import { Title } from "@/components/ui/title"
 
 function ContactUs() {
     return (
     <>
     {/*Logo & nav bar should go up at the top!!!*/}
         <CentredDiv>
-            <TitleDiv text="Contact us" prev="../settings"/>
+            <Title text="Contact us" prev="../settings"/>
             <SettingsNext text={"FAQ"} next={"faq"}/>
             <p>Found any issues or bugs? Contact us at catgirls@meow.com.</p>
             <p>If you have any questions, please refer to the FAQ first.</p>
