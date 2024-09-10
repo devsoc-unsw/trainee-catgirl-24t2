@@ -2,9 +2,7 @@ import { Button } from "@/components/ui/button"
 import React from 'react'
 import { Search } from 'lucide-react'
 import { Menu } from 'lucide-react'
-import { buttonVariants } from "@/components/ui/button"
 import { Link } from "react-router-dom"
-import ViewForms from "@/pages/ViewForms"
 
 interface NavBarProps {
     PageNum: number;

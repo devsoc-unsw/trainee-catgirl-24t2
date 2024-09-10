@@ -10,7 +10,7 @@ function FormAutofill() {
     <>
     {/*Logo & nav bar should go up at the top!!!*/}
         <CentredDiv>
-            <Title text="Form autofill details" prev="../settings"/>
+            <Title text="Form autofill details" type="settings-title" prev="../settings"/>
             <SettingsBodyDiv>
                 <p className="w-[80%]">Name</p>
                 <Input className="w-[80%] h-[10%]" type="name" placeholder="Your name here!"/>

@@ -8,7 +8,7 @@ function UserDetails() {
     {/*Logo & nav bar should go up at the top!!!*/}
     {/*AAAAAAA YES FEWUSYEFBSFBSF THE COMPONENTS WORK AIUOGBFIEGAYGFBA*/}
         <CentredDiv>
-            <Title text="User details" prev="../settings"/>
+            <Title text="User details" type="settings-title" prev="../settings"/>
             <SettingsNext text={"Account settings"} next={"account"}/>
             <SettingsNext text={"Forms & societies"} next={"forms"}/>
         </CentredDiv>

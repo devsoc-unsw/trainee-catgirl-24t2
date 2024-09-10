@@ -9,7 +9,7 @@ function Manage() {
     <>
     {isDesktop && 
         <Page type="main" variant="desktop" page={3}>
-            <Title text="Manage" prev=""/>
+            <Title text="Manage" type="title"/>
         </Page>
     }
     </>

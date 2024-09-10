@@ -6,7 +6,7 @@ function About() {
     <>
     {/*Logo & nav bar should go up at the top!!!*/}
         <CentredDiv>
-            <Title text="About" prev="../settings"/>
+            <Title text="About" type="settings-title" prev="../settings"/>
             <p>An improved google forms, catered for UNSW societies.</p>
             <p>No catgirls to be found here...or not..?</p>
         </CentredDiv>

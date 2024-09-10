@@ -7,7 +7,7 @@ function Faq() {
     <>
     {/*Logo & nav bar should go up at the top!!!*/}
         <CentredDiv>
-            <Title text="FAQ" prev="../settings"/>
+            <Title text="FAQ" type="settings-title" prev="../settings"/>
             <SettingsBodyDiv>
                 {/*I know I could have used ul here but 1. faq is fairly unimportant rn and 2. its easier to format like this*/}
                 {/* I could have also made a component but uhh......... :3 */}

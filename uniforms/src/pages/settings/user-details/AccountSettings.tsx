@@ -8,7 +8,7 @@ function AccountSettings() {
     {/*Logo & nav bar should go up at the top!!!*/}
 
     <CentredDiv>
-        <Title text="Account Settings" prev="../settings/user"/>
+        <Title text="Account Settings" type="settings-title" prev="../settings/user"/>
         <p>Username goes here!</p>
         <SettingsNext text={"Email"} next={"email"}/>
         <SettingsNext text={"Username"} next={"username"}/>

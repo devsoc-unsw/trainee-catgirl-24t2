@@ -9,7 +9,7 @@ function Email() {
     <>
     {/*Logo & nav bar should go up at the top!!!*/}
     <CentredDiv>
-        <Title text="Email" prev="../settings/user/account"/>
+        <Title text="Email" type="settings-title" prev="../settings/user/account"/>
         <SettingsBodyDiv>
             <p className="w-[80%]">You must have an email linked to your account.</p>
             <Input className="w-[80%] h-[10%] peer" type="email" placeholder="Your email here!"/>
