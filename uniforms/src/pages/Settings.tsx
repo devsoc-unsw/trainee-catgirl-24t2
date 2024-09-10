@@ -1,11 +1,15 @@
 import { CentredDiv } from "@/components/ui/centred-div"
 import { SettingsNext } from "@/components/ui/settings/settings-next"
 import { SettingsBodyDiv } from "@/components/ui/settings/settings-body-div"
+import { screenDetector } from "@/utils/screenDetector"
+
 
 function Settings() {
+    const { isMobile, isTablet, isDesktop } = screenDetector();
     return (
     <>
     {/*Logo & nav bar should go up at the top!!!*/}
+    {isMobile && 
         <CentredDiv>
             <SettingsBodyDiv>
                 <h1 className= "pt-[5%] text-center">Settings</h1>
@@ -17,6 +21,9 @@ function Settings() {
             </SettingsBodyDiv>
             <a href="#" className="h-[10%] text-foreground hover:text-black">Log out</a>
         </CentredDiv>
+    }
+    {isDesktop && <h1>Welcome, Desktop User!</h1>}
+        
     </>
     )
 }
