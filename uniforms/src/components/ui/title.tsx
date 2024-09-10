@@ -1,6 +1,5 @@
 import { ChevronLeft} from "lucide-react"
 import { Link } from "react-router-dom"
-import { Separator } from "./separator"
 
 const Title = ({ text, prev }: { text: string, prev: string }) => {
     if (prev == "") {

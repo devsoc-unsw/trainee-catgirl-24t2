@@ -29,6 +29,14 @@ function Settings() {
     {isDesktop && 
         <Page type="main" variant="desktop" page={4}>
             <Title text="Settings" prev=""/>
+            <div className="flex w-fill h-fill">
+                <div className="w-[30%]">
+                    
+                </div>
+                <div className="w-[70%]">
+
+                </div>
+            </div>
         </Page>
     }
     </>

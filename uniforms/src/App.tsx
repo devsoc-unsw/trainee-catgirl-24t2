@@ -18,12 +18,17 @@ import FormAutofill from './pages/settings/form-autofill/FormAutofill';
 import ContactUs from './pages/settings/contact-us/ContactUs';
 import Faq from './pages/settings/contact-us/Faq';
 import About from './pages/settings/about/About';
+import Societies from './pages/Societies';
+import Manage from './pages/Manage';
 
 function App() { 
   return (
      <BrowserRouter>
 	<Routes>
 	  <Route path="forms" element={<Forms />} />
+    <Route path="viewforms" element={<ViewForms />} />
+    <Route path="societies" element={<Societies />} />
+    <Route path="manage" element={<Manage />} />
     <Route path="settings" element={<Settings />} />
     <Route path="settings/user" element={<UserDetails />} />
     <Route path="settings/user/account" element={<AccountSettings />} />
@@ -36,8 +41,6 @@ function App() {
     <Route path="settings/contact" element={<ContactUs />} />
     <Route path="settings/contact/faq" element={<Faq />} />
     <Route path="settings/about" element={<About />} />
-
-    <Route path="viewforms" element={<ViewForms />} />
 	</Routes>
      </BrowserRouter>
   );
