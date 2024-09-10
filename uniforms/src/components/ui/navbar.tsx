@@ -2,6 +2,9 @@ import { Button } from "@/components/ui/button"
 import React from 'react'
 import { Search } from 'lucide-react'
 import { Menu } from 'lucide-react'
+import { buttonVariants } from "@/components/ui/button"
+import { Link } from "react-router-dom"
+import ViewForms from "@/pages/ViewForms"
 
 interface NavBarProps {
     PageNum: number;
@@ -22,11 +25,20 @@ const NavBar: React.FC<NavBarProps> = ( {PageNum, variant} ) => {
             </div>
 
             {/* Buttons to the center */}
+            
             <div className="flex-grow flex flex-col justify-center items-center gap-[20px]">
-                <Button className="w-[160px] h-[60px] text-[16px]" variant={PageButton(1)}>View Forms</Button>
-                <Button className="w-[160px] h-[60px] text-[16px]" variant={PageButton(2)}>Societies</Button>
-                <Button className="w-[160px] h-[60px] text-[16px]" variant={PageButton(3)}>Manage</Button>
-                <Button className="w-[160px] h-[60px] text-[16px]" variant={PageButton(4)}>Settings</Button>
+                <Button className="w-[160px] h-[60px] text-[16px] hover:text-foreground" variant={PageButton(1)} asChild>
+                    <Link to="../viewforms">View Forms</Link>
+                </Button>
+                <Button className="w-[160px] h-[60px] text-[16px] hover:text-foreground" variant={PageButton(2)} asChild>
+                    <Link to="../societies">Societies</Link>
+                </Button>
+                <Button className="w-[160px] h-[60px] text-[16px] hover:text-foreground" variant={PageButton(3)} asChild>
+                    <Link to="../manage">Manage</Link>
+                </Button>
+                <Button className="w-[160px] h-[60px] text-[16px] hover:text-foreground" variant={PageButton(4)} asChild>
+                    <Link to="../settings">Settings</Link>
+                </Button>
             </div>
 
             {/* Bottom text and logout */}
@@ -46,10 +58,18 @@ const NavBar: React.FC<NavBarProps> = ( {PageNum, variant} ) => {
                 </div>
             </div>
             <div className="flex flex-col justify-center items-center">
-                <Button className="w-[360px] h-[60px] text-[16px] rounded-[0px]" variant={PageButton(1)}>View Forms</Button>
-                <Button className="w-[360px] h-[60px] text-[16px] rounded-[0px]" variant={PageButton(2)}>Societies</Button>
-                <Button className="w-[360px] h-[60px] text-[16px] rounded-[0px]" variant={PageButton(3)}>Manage</Button>
-                <Button className="w-[360px] h-[60px] text-[16px] rounded-[0px]" variant={PageButton(4)}>Settings</Button>
+                <Button className="w-[360px] h-[60px] text-[16px] rounded-[0px] hover:text-foreground" variant={PageButton(1)} asChild>
+                    <Link to="../viewforms">View Forms</Link>
+                </Button>
+                <Button className="w-[360px] h-[60px] text-[16px] rounded-[0px] hover:text-foreground" variant={PageButton(2)} asChild>
+                    <Link to="../societies">Societies</Link>
+                </Button>
+                <Button className="w-[360px] h-[60px] text-[16px] rounded-[0px] hover:text-foreground" variant={PageButton(3)} asChild>
+                    <Link to="../manage">Manage</Link>
+                </Button>
+                <Button className="w-[360px] h-[60px] text-[16px] rounded-[0px] hover:text-foreground" variant={PageButton(4)} asChild>
+                    <Link to="../settings">Settings</Link>
+                </Button>
             </div>
         </div>
 }
