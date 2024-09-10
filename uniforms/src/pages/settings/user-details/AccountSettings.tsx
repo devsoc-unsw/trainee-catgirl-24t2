@@ -1,6 +1,6 @@
 import { CentredDiv } from "@/components/ui/centred-div"
 import { SettingsNext } from "@/components/ui/settings/settings-next"
-import { SettingsTitleDiv } from "@/components/ui/settings/settings-title-div"
+import { Title } from "@/components/ui/title"
 
 function AccountSettings() {
     return (
@@ -8,7 +8,7 @@ function AccountSettings() {
     {/*Logo & nav bar should go up at the top!!!*/}
 
     <CentredDiv>
-        <SettingsTitleDiv text="Account Settings" prev="../settings/user"/>
+        <Title text="Account Settings" prev="../settings/user"/>
         <p>Username goes here!</p>
         <SettingsNext text={"Email"} next={"email"}/>
         <SettingsNext text={"Username"} next={"username"}/>

@@ -1,5 +1,5 @@
 import { CentredDiv } from "@/components/ui/centred-div"
-import { SettingsTitleDiv } from "@/components/ui/settings/settings-title-div"
+import { Title } from "@/components/ui/title"
 import { SettingsBodyDiv } from "@/components/ui/settings/settings-body-div"
 
 function Faq() {
@@ -7,7 +7,7 @@ function Faq() {
     <>
     {/*Logo & nav bar should go up at the top!!!*/}
         <CentredDiv>
-            <SettingsTitleDiv text="FAQ" prev="../settings"/>
+            <Title text="FAQ" prev="../settings"/>
             <SettingsBodyDiv>
                 {/*I know I could have used ul here but 1. faq is fairly unimportant rn and 2. its easier to format like this*/}
                 {/* I could have also made a component but uhh......... :3 */}
