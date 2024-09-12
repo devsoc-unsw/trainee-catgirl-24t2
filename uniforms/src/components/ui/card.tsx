@@ -6,7 +6,7 @@ interface CardProps {
   variant: string;
 }
 const Card: React.FC<CardProps> = ({ variant }) => {
-    return variant === "d" ?
+    return variant === "desktop" ?
       <Button
         /* Professional Figma Dev Mode user*/
         className="flex-grow flex flex-col justify-end items-center rounded-[20px] w-[20vw] max-w-[220px] h-[251px] hover:animate-scale"

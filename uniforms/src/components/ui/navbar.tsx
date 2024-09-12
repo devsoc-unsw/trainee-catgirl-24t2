@@ -2,6 +2,7 @@ import { Button } from "@/components/ui/button"
 import React from 'react'
 import { Search } from 'lucide-react'
 import { Menu } from 'lucide-react'
+import { Link } from "react-router-dom"
 
 interface NavBarProps {
     PageNum: number;
@@ -14,7 +15,7 @@ const NavBar: React.FC<NavBarProps> = ( {PageNum, variant} ) => {
         return index === PageNum ? "active" : "default";
     };
 
-    return variant === "d" ?
+    return variant === "desktop" ?
         <div className="w-[20vw] h-[100vh] flex flex-col bg-primary p-[50px]">
             {/* Title at the top */}
             <div className="flex flex-col items-center gap-[50px]">
@@ -22,6 +23,7 @@ const NavBar: React.FC<NavBarProps> = ( {PageNum, variant} ) => {
             </div>
 
             {/* Buttons to the center */}
+            
             <div className="flex-grow flex flex-col justify-center items-center gap-[20px]">
                 <Button className="w-[80%] max-w-[160px] h-[60px] text-[16px]" variant={PageButton(1)}>View Forms</Button>
                 <Button className="w-[80%] max-w-[160px] h-[60px] text-[16px]" variant={PageButton(2)}>Societies</Button>

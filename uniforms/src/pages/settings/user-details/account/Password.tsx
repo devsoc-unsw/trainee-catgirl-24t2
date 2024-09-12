@@ -1,7 +1,7 @@
 import { Input } from "@/components/ui/input"
 import { CentredDiv } from "@/components/ui/centred-div"
 import { SettingsSave } from "@/components/ui/settings/settings-save"
-import { SettingsTitleDiv } from "@/components/ui/settings/settings-title-div"
+import { Title } from "@/components/ui/title"
 import { SettingsBodyDiv } from "@/components/ui/settings/settings-body-div"
 
 
@@ -16,7 +16,7 @@ function Password() {
     {/*Logo & nav bar should go up at the top!!!*/}
         
     <CentredDiv>
-        <SettingsTitleDiv text="Password" prev="../settings/user/account"/>
+        <Title text="Password" type="settings-title" prev="../settings/user/account"/>
         <SettingsBodyDiv>
             <p className="w-[80%]">Your password must be at least 8 characters long, contain at least one capital letter, one lower case letter and one symbol.</p>
             <Input className="w-[80%] h-[10%]" type="password" placeholder="Enter current password"/>

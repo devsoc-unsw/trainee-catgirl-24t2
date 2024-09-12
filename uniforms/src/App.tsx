@@ -1,8 +1,4 @@
-import { useState } from 'react';
-import reactLogo from './assets/react.svg';
-import viteLogo from '/vite.svg';
-import './App.css';
-import ReactDOM from "react-dom/client";
+import "./App.css";
 import { BrowserRouter, Routes, Route } from "react-router-dom";
 
 import Login from "./pages/Login"
@@ -16,12 +12,14 @@ import Email from "./pages/settings/user-details/account/Email";
 import Username from "./pages/settings/user-details/account/Username";
 import Password from "./pages/settings/user-details/account/Password";
 import Delete from "./pages/settings/user-details/account/Delete";
-import FormAutofill from './pages/settings/form-autofill/FormAutofill';
-import ContactUs from './pages/settings/contact-us/ContactUs';
-import Faq from './pages/settings/contact-us/Faq';
-import About from './pages/settings/about/About';
+import FormAutofill from "./pages/settings/form-autofill/FormAutofill";
+import ContactUs from "./pages/settings/contact-us/ContactUs";
+import Faq from "./pages/settings/contact-us/Faq";
+import About from "./pages/settings/about/About";
+import Societies from "./pages/Societies";
+import Manage from "./pages/Manage";
 
-function App() { 
+function App() {
   return (
      <BrowserRouter>
 	<Routes>

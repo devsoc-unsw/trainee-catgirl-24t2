@@ -6,7 +6,7 @@ interface CardGridProps {
 }
 
 const CardGrid: React.FC<CardGridProps> = ({ variant })=> {
-    return variant === "d" ?
+    return variant === "desktop" ?
         <div className="flex flex-wrap items-center content-centre w-[80vw] max-w-[970px] h-[251px] p-[10px] gap-[20px]">
             { /*Add Forms Button*/ }
             <div className="flex justify-center items-center rounded-[20px] w-[20vw] max-w-[220px] h-[251px] hover:animate-scale bg-card hover:bg-card">
