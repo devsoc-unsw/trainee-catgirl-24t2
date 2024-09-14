@@ -19,6 +19,7 @@ import Faq from "./pages/settings/contact-us/Faq";
 import About from "./pages/settings/about/About";
 import Societies from "./pages/Societies";
 import Manage from "./pages/Manage";
+import SocietyView from "./pages/SocietyView";
 
 function App() {
   return (
@@ -42,6 +43,7 @@ function App() {
     <Route path="societies" element={<Societies />}/>
     <Route path="manage" element={<Manage />}/>
     <Route path="viewforms" element={<ViewForms />} />
+    <Route path="societyview" element={<SocietyView />} />
 	</Routes>
      </BrowserRouter>
   );
