@@ -9,7 +9,7 @@ function ManageSocieties() {
     <>
     {isDesktop && 
         <Page type="main" variant="desktop" page={3}>
-            <Title text="Manage" type="title"/>
+            <Title text="Manage Forms" type="title"/>
         </Page>
     }
     </>

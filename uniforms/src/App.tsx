@@ -19,7 +19,7 @@ import Faq from "./pages/settings/contact-us/Faq";
 import About from "./pages/settings/about/About";
 import Societies from "./pages/Societies";
 import ManageForms from "./pages/ManageForms";
-import ManageSocieties from "./pages/ManageForms";
+import ManageSocieties from "./pages/ManageSocieties";
 
 function App() {
   return (
