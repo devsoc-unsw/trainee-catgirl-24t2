@@ -18,8 +18,8 @@ import ContactUs from "./pages/settings/contact-us/ContactUs";
 import Faq from "./pages/settings/contact-us/Faq";
 import About from "./pages/settings/about/About";
 import Societies from "./pages/Societies";
-import Manage from "./pages/Manage";
-import SocietyView from "./pages/SocietyView";
+import ManageForms from "./pages/ManageForms";
+import ManageSocieties from "./pages/ManageSocieties";
 
 function App() {
   return (
@@ -41,7 +41,8 @@ function App() {
     <Route path="settings/contact/faq" element={<Faq />} />
     <Route path="settings/about" element={<About />} />
     <Route path="societies" element={<Societies />}/>
-    <Route path="manage" element={<Manage />}/>
+    <Route path="manageforms" element={<ManageForms />}/>
+    <Route path="managesocieties" element={<ManageSocieties />}/>
     <Route path="viewforms" element={<ViewForms />} />
     <Route path="societyview" element={<SocietyView />} />
 	</Routes>
