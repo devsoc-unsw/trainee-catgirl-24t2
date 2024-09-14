@@ -3,7 +3,7 @@ import { Title } from "@/components/ui/title"
 import { SettingsBodyDiv } from "@/components/ui/settings/settings-body-div"
 import { Button } from "@/components/ui/button"
 
-function AccountSettings() {
+function Delete() {
     return (
     <>
     {/*Logo & nav bar should go up at the top!!!*/}
@@ -22,4 +22,4 @@ function AccountSettings() {
     )
 }
 
-export default AccountSettings
+export default Delete

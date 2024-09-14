@@ -39,7 +39,8 @@ function App() {
     <Route path="settings/contact" element={<ContactUs />} />
     <Route path="settings/contact/faq" element={<Faq />} />
     <Route path="settings/about" element={<About />} />
-
+    <Route path="societies" element={<Societies />}/>
+    <Route path="manage" element={<Manage />}/>
     <Route path="viewforms" element={<ViewForms />} />
 	</Routes>
      </BrowserRouter>
