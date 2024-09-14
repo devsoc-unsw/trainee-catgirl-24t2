@@ -1,11 +1,21 @@
 import { ChevronLeft} from "lucide-react"
 import { Link } from "react-router-dom"
+import { buttonVariants } from "./button"
 
 const Title = ({ text, type, prev }: { text: string, type: string, prev?: string }) => {
     if (type == "title") {
         return(
             <div className="mx-auto container pt-5">
                 <h1 className= "text-center">{`${text}`}</h1>
+            </div>
+        )
+    } else if (type == "title-back") {
+        return(
+            <div className="flex p-[20px] rounded-2xl items-center ">
+                <Link to={`${prev}`} className={buttonVariants({ variant: "default" }) + "text-foreground hover:text-black"} >
+                    <ChevronLeft className="grow-1 w-vw h-vh"></ChevronLeft>
+                </Link>
+                <h1 className= "grow text-center h-10">{`${text}`}</h1>
             </div>
         )
     } else if (type == "subtitle") {
