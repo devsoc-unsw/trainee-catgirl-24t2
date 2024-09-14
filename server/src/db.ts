@@ -15,7 +15,7 @@ if (import.meta.main) {
       age integer,
       password text not null,
       created_at integer timestamp default (strftime('%s', 'now'))
-    )`
+    )`,
   );
 
   sqlite.run(
@@ -23,7 +23,7 @@ if (import.meta.main) {
       id integer primary key autoincrement,
       name text not null,
       created_at integer timestamp default (strftime('%s', 'now'))
-    )`
+    )`,
   );
 
   sqlite.run(
@@ -33,7 +33,7 @@ if (import.meta.main) {
       user_id integer not null references TODO,
       position integer not null,
       created_at integer timestamp default (strftime('%s', 'now'))
-    )`
+    )`,
   );
 
   sqlite.run(
@@ -43,7 +43,7 @@ if (import.meta.main) {
       society_id not null references TODO,
       fields text json not null,
       created_at integer timestamp default (strftime('%s', 'now'))
-    )`
+    )`,
   );
 
   sqlite.run(
@@ -53,7 +53,7 @@ if (import.meta.main) {
       user_id integer not null references TODO,
       answers text json not null,
       created_at integer timestamp default (strftime('%s', 'now'))
-    )`
+    )`,
   );
 
   sqlite.run(
@@ -63,6 +63,6 @@ if (import.meta.main) {
       field text not null,
       value text not null,
       created_at integer timestamp default (strftime('%s', 'now'))
-    )`
+    )`,
   );
 }

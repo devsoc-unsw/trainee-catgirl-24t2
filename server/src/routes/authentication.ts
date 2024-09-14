@@ -10,6 +10,8 @@ import { SECRET_KEY } from '../env';
 export const authentication = express.Router();
 
 authentication.post('/', async (req: Request, res: Response) => {
+  console.log(req.body);
+
   let { email, password } = req.body;
   email = (email as string).toLocaleLowerCase();
   const query = await db.select().from(users).where(eq(users.email, email));
@@ -36,5 +38,6 @@ authentication.put('/', async (req: Request, res: Response) => {
     expiresIn: '24 hours',
   });
 
+  console.log(token);
   res.status(200).json({ token });
 });
