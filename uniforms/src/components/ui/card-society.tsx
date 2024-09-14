@@ -7,7 +7,7 @@ interface CardProps {
   variant: string;
 }
 
-const Card: React.FC<CardProps> = ({ variant }) => {
+const SocietyCard: React.FC<CardProps> = ({ variant }) => {
     return variant === "d" ?
       <Button
         /* Professional Figma Dev Mode user*/
@@ -43,4 +43,4 @@ const Card: React.FC<CardProps> = ({ variant }) => {
       </Button>
   };
 
-  export { Card }
+  export { SocietyCard }
