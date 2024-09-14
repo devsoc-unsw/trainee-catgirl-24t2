@@ -38,7 +38,7 @@ function Settings() {
         </CentredDiv>
     }
     {isDesktop && 
-        <Page type="main" variant="desktop" page={4}>
+        <Page type="main" variant="desktop" page={5}>
             <Title text="Settings" type="title"/>
             <div className="flex w-[100%] h-[90%]">
                 <div className="w-[300px] h-[90%] mt-5 ml-20 overflow-auto">

@@ -8,8 +8,8 @@ function ManageForms() {
     return (
     <>
     {isDesktop && 
-        <Page type="main" variant="desktop" page={3}>
-            <Title text="Manage" type="title"/>
+        <Page type="main" variant="desktop" page={4}>
+            <Title text="Manage Societies" type="title"/>
         </Page>
     }
     </>
