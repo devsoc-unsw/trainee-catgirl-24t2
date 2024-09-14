@@ -1,4 +1,4 @@
-import { Card } from "@/components/ui/card"
+import { Card } from "@/components/ui/card-society"
 import { Plus } from 'lucide-react';
 
 interface CardGridProps {

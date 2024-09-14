@@ -1,26 +1,63 @@
-import { Input } from "@/components/ui/input"
+"use client"
+
+import { zodResolver } from "@hookform/resolvers/zod"
+import { useForm } from "react-hook-form"
+import { z } from "zod"
+
 import { Button } from "@/components/ui/button"
-import { EyeOff } from 'lucide-react'
+import {
+  Form,
+  FormControl,
+  FormDescription,
+  FormField,
+  FormItem,
+  FormLabel,
+  FormMessage,
+} from "@/components/ui/form"
+import { Input } from "@/components/ui/input"
 
-function Login () {
-    return (
-        /*TO DO (maybe with backend): have red text for invalid input (not too important tbh)*/
-        <div className="flex flex-col w-[100vw] h-full items-center justify-center gap-[50px]">
-            <p className="text-4xl font-bold">UNIFORM</p>
-            <div className="flex flex-col items-left w-[50vh] h-[60%] gap-[16px] p-[30px] border-2 rounded-3xl">
-                <p>Email</p>
-                <Input></Input>
-                <p>Password</p>
-                <div className="relative flex flex-row items-center">
-                    <Input></Input>
-                    <EyeOff className="absolute right-[3%]"></EyeOff>
-                </div>
-                <Button>Sign In</Button>
-                <p className="underline">Forgot Password?</p>
-                <p className="underline">Create a new account</p>
-            </div>
-        </div>
-    )
+const formSchema = z.object({
+  username: z.string().min(2, {
+    message: "Username must be at least 2 characters.",
+  }),
+})
+
+export default function Login() {
+  const form = useForm<z.infer<typeof formSchema>>({
+    resolver: zodResolver(formSchema),
+    defaultValues: {
+      username: "",
+    },
+  })
+ 
+  // 2. Define a submit handler.
+  function onSubmit(values: z.infer<typeof formSchema>) {
+    // Do something with the form values.
+    // ✅ This will be type-safe and validated.
+    console.log(values)
+  }
+
+  return (
+    <Form {...form}>
+      <form onSubmit={form.handleSubmit(onSubmit)} className="space-y-8">
+        <FormField
+          control={form.control}
+          name="username"
+          render={({ field }) => (
+            <FormItem>
+              <FormLabel>Username</FormLabel>
+              <FormControl>
+                <Input placeholder="shadcn" {...field} />
+              </FormControl>
+              <FormDescription>
+                This is your public display name.
+              </FormDescription>
+              <FormMessage />
+            </FormItem>
+          )}
+        />
+        <Button type="submit">Submit</Button>
+      </form>
+    </Form>
+  )
 }
-
-export default Login
