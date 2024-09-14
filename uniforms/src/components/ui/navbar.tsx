@@ -34,9 +34,12 @@ const NavBar: React.FC<NavBarProps> = ( {PageNum, variant} ) => {
                     <Link to="../societies">Societies</Link>
                 </Button>
                 <Button className="w-[160px] h-[60px] text-[16px] hover:text-foreground" variant={PageButton(3)} asChild>
-                    <Link to="../manage">Manage</Link>
+                    <Link to="../manageforms">Manage Forms</Link>
                 </Button>
                 <Button className="w-[160px] h-[60px] text-[16px] hover:text-foreground" variant={PageButton(4)} asChild>
+                    <Link to="../managesocieties">Manage Societies</Link>
+                </Button>
+                <Button className="w-[160px] h-[60px] text-[16px] hover:text-foreground" variant={PageButton(5)} asChild>
                     <Link to="../settings">Settings</Link>
                 </Button>
             </div>
@@ -65,9 +68,12 @@ const NavBar: React.FC<NavBarProps> = ( {PageNum, variant} ) => {
                     <Link to="../societies">Societies</Link>
                 </Button>
                 <Button className="w-[360px] h-[60px] text-[16px] rounded-[0px] hover:text-foreground" variant={PageButton(3)} asChild>
-                    <Link to="../manage">Manage</Link>
+                    <Link to="../manageforms">Manage Forms</Link>
                 </Button>
-                <Button className="w-[360px] h-[60px] text-[16px] rounded-[0px] hover:text-foreground" variant={PageButton(4)} asChild>
+                <Button className="w-[360px] h-[60px] text-[16px] rounded-[0px] hover:text-foreground" variant={PageButton(3)} asChild>
+                    <Link to="../managesocieties">Manage Societies</Link>
+                </Button>
+                <Button className="w-[360px] h-[60px] text-[16px] rounded-[0px] hover:text-foreground" variant={PageButton(5)} asChild>
                     <Link to="../settings">Settings</Link>
                 </Button>
             </div>
