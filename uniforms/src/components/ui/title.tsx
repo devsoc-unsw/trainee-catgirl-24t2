@@ -3,13 +3,12 @@ import { Link } from "react-router-dom"
 import { buttonVariants } from "./button"
 
 import { cn } from "@/lib/utils";
-import React from "react";
 
 interface TitleProps {
     text: string;
     type: string;
     prev?: string;
-    className: string;
+    className?: string;
 }
 
 const Title = ({ text, type, prev, className }: TitleProps) => {

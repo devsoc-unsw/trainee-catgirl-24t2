@@ -3,7 +3,7 @@ import { Page } from "@/components/ui/page"
 import { Title } from "@/components/ui/title"
 
 
-function ManageSocieties() {
+function ManageForms() {
     const { isDesktop } = screenDetector();
     return (
     <>
@@ -16,4 +16,4 @@ function ManageSocieties() {
     )
 }
 
-export default ManageSocieties
+export default ManageForms
