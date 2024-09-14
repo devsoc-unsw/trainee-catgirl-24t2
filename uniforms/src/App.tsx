@@ -44,6 +44,7 @@ function App() {
     <Route path="manageforms" element={<ManageForms />}/>
     <Route path="managesocieties" element={<ManageSocieties />}/>
     <Route path="viewforms" element={<ViewForms />} />
+    <Route path="societyview" element={<SocietyView />} />
 	</Routes>
      </BrowserRouter>
   );
