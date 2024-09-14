@@ -3,17 +3,20 @@ import { Page } from "@/components/ui/page"
 import { Title } from "@/components/ui/title"
 
 
-function Manage() {
+function ManageMembers() {
     const { isDesktop } = screenDetector();
+    let permissionLevel = "Moderator"
     return (
     <>
     {isDesktop && 
         <Page type="main" variant="desktop" page={3}>
-            <Title text="Manage" type="title"/>
+            <Title text="Manage Members" type="title"/>
+            <p>Permission level: {permissionLevel}</p>
+
         </Page>
     }
     </>
     )
 }
 
-export default Manage
+export default ManageMembers
