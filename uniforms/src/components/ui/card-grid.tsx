@@ -1,11 +1,13 @@
 import { SocietyCard } from "@/components/ui/card-society"
 import { Plus } from 'lucide-react';
+import { ReactNode } from 'react';
 
 interface CardGridProps {
     variant: string;
+    children: ReactNode
 }
 
-const CardGrid: React.FC<CardGridProps> = ({ variant })=> {
+const CardGrid: React.FC<CardGridProps> = ({ variant, children })=> {
     return variant === "desktop" ?
         <div className="flex flex-wrap items-center content-centre w-[80vw] max-w-[970px] h-[251px] p-[10px] gap-[20px]">
             { /*Add Forms Button*/ }
@@ -13,7 +15,7 @@ const CardGrid: React.FC<CardGridProps> = ({ variant })=> {
                 <Plus className="w-[120px] h-[120px]"></Plus>
             </div>
             { /*Maybe have an input as the amount of cards?*/ }
-            <SocietyCard variant={variant}></SocietyCard>  
+            {children} 
         </div>
     :
         <div className="flex flex-col items-center content-centre w-[80vw] max-w-[280px] h-[251px] p-[10px] gap-[20px]">
@@ -22,7 +24,7 @@ const CardGrid: React.FC<CardGridProps> = ({ variant })=> {
                 <Plus className="w-[30px] h-[30px] scale-bounce"></Plus>
             </div>
             { /*Maybe have an input as the amount of cards?*/ }
-            <SocietyCard variant={variant}></SocietyCard>  
+            {children} 
         </div>
 }
 
