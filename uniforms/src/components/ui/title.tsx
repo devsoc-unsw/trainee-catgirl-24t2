@@ -4,23 +4,34 @@ import { Link } from "react-router-dom"
 const Title = ({ text, type, prev }: { text: string, type: string, prev?: string }) => {
     if (type == "title") {
         return(
-            <div className="mx-auto container pt-[50px]">
+            <div className="mx-auto container pt-5">
                 <h1 className= "text-center">{`${text}`}</h1>
             </div>
         )
     } else if (type == "subtitle") {
-        <div className="mx-auto container pt-[50px]">
+        return(
+        <div className="mx-auto container p-3">
             <h2 className= "text-center">{`${text}`}</h2>
         </div>
-    } else if (type == "settings-title") {
-        return(
-            <div className="flex w-[80%] items-center pt-[5%]">
-                <Link to={`${prev}`} className="text-foreground hover:text-black">
-                <ChevronLeft className="grow-1 w-vw h-vh"></ChevronLeft>
-                </Link>
-                <h1 className= "grow text-center">{`${text}`}</h1>
-            </div>
         )
+    } else if (type == "settings-title") {
+        if (window.location !== window.parent.location) {
+            return(
+                <div className="w-[100%]">
+                    <h1 className= "w-[100%] pt-7 grow text-center">{`${text}`}</h1>
+                </div>
+            )
+        } else {
+            return(
+                <div className="flex w-[80%] items-center pt-7">
+                    <Link to={`${prev}`} className="text-foreground hover:text-black">
+                        <ChevronLeft className="grow-1 w-vw h-vh"></ChevronLeft>
+                    </Link>
+                    <h1 className= "grow text-center">{`${text}`}</h1>
+                </div>
+            )
+        } 
+        
     }
 
 }
