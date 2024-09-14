@@ -1,4 +1,4 @@
-import { Card } from "@/components/ui/card"
+import { SocietyCard } from "@/components/ui/card-society"
 import { Plus } from 'lucide-react';
 
 interface CardGridProps {
@@ -13,7 +13,7 @@ const CardGrid: React.FC<CardGridProps> = ({ variant })=> {
                 <Plus className="w-[120px] h-[120px]"></Plus>
             </div>
             { /*Maybe have an input as the amount of cards?*/ }
-            <Card variant={variant}></Card>  
+            <SocietyCard variant={variant}></SocietyCard>  
         </div>
     :
         <div className="flex flex-col items-center content-centre w-[80vw] max-w-[280px] h-[251px] p-[10px] gap-[20px]">
@@ -22,7 +22,7 @@ const CardGrid: React.FC<CardGridProps> = ({ variant })=> {
                 <Plus className="w-[30px] h-[30px] scale-bounce"></Plus>
             </div>
             { /*Maybe have an input as the amount of cards?*/ }
-            <Card variant={variant}></Card>  
+            <SocietyCard variant={variant}></SocietyCard>  
         </div>
 }
 
