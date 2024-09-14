@@ -16,7 +16,6 @@ import {
   FormMessage,
 } from "@/components/ui/form"
 import { Input } from "@/components/ui/input"
-import { json } from "stream/consumers"
 
 const formSchema = z.object({
   email: z.string().min(2, {
@@ -40,20 +39,6 @@ export default function Login() {
   function onSubmit(values: z.infer<typeof formSchema>) {
     // Do something with the form values.
     // ✅ This will be type-safe and validated.
-<<<<<<< Updated upstream
-    fetch("/authentication", {
-      method: "POST",
-      body: JSON.stringify({
-        email: values.email,
-        password: values.password
-      })
-    })
-    .then((response) => response.json())
-    .then((json) => console.log(json));
-=======
-<<<<<<< Updated upstream
-    console.log(values)
-=======
     fetch("http://localhost:3000/authentication", {
       method: "PUT",
       body: JSON.stringify({
@@ -67,8 +52,6 @@ export default function Login() {
     // TODO: Remove debug message
     .then((res) => res.json())
     .then((json) => console.log(json));
->>>>>>> Stashed changes
->>>>>>> Stashed changes
   }
 
   return (
