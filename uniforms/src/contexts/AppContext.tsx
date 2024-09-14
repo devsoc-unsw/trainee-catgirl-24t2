@@ -17,7 +17,9 @@ const initialAppContext = {
 export const AppContext = createContext<AppContextType>(initialAppContext);
 
 // usage:
-// const { token } = useContext(AppContext)
+// const LoginPage = () => {
+//  const { token, updateToken } = useContext(AppContext)
+// ...
 const AppProvider = ({ children }: AppProviderProps) => {
   const [token, setToken] = useState(localStorage.getItem('token'));
   const updateToken = (newToken: string | null) => {
