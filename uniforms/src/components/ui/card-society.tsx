@@ -3,7 +3,6 @@ import React from "react";
 import { ChevronRight } from 'lucide-react';
 
 interface CardProps {
-  imageUrl: string;
   variant: string;
 }
 
