@@ -1,5 +1,6 @@
 "use client"
 
+import { Card } from "@/components/ui/card"
 import { zodResolver } from "@hookform/resolvers/zod"
 import { useForm } from "react-hook-form"
 import { z } from "zod"
@@ -17,8 +18,11 @@ import {
 import { Input } from "@/components/ui/input"
 
 const formSchema = z.object({
-  username: z.string().min(2, {
+  email: z.string().min(2, {
     message: "Username must be at least 2 characters.",
+  }),
+  password: z.string().min(2, {
+    message: "Password must be at least 2 characters.",
   }),
 })
 
@@ -26,7 +30,8 @@ export default function Login() {
   const form = useForm<z.infer<typeof formSchema>>({
     resolver: zodResolver(formSchema),
     defaultValues: {
-      username: "",
+      email: "",
+      password: "",
     },
   })
  
@@ -38,26 +43,45 @@ export default function Login() {
   }
 
   return (
-    <Form {...form}>
-      <form onSubmit={form.handleSubmit(onSubmit)} className="space-y-8">
-        <FormField
-          control={form.control}
-          name="username"
-          render={({ field }) => (
-            <FormItem>
-              <FormLabel>Username</FormLabel>
-              <FormControl>
-                <Input placeholder="shadcn" {...field} />
-              </FormControl>
-              <FormDescription>
-                This is your public display name.
-              </FormDescription>
-              <FormMessage />
-            </FormItem>
-          )}
-        />
-        <Button type="submit">Submit</Button>
-      </form>
-    </Form>
+    <div className="flex flex-col w-[100vw] h-full items-center justify-center gap-[50px]">
+      <p className="text-4xl font-bold">UNIFORM</p>
+    <Card className="flex-col h-[60%] items-left w-[35vw] h-[60%] gap-[16px] p-[30px]">
+      <Form {...form}>
+        <form onSubmit={form.handleSubmit(onSubmit)} className="space-y-8">
+          <FormField
+            control={form.control}
+            name="email"
+            render={({ field }) => (
+              <FormItem>
+                <FormLabel>Email</FormLabel>
+                <FormControl>
+                  <Input placeholder="" {...field} />
+                </FormControl>
+                <FormMessage />
+              </FormItem>
+            )}
+          />
+          <FormField
+            control={form.control}
+            name="password"
+            render={({ field }) => (
+              <FormItem>
+                <FormLabel>Password</FormLabel>
+                <FormControl>
+                  <Input type="password" placeholder="" {...field} />
+                </FormControl>
+                <FormMessage />
+              </FormItem>
+            )}
+          />
+          <Button type="submit" className="w-[100%]">Submit</Button>
+          <div className="flex flex-row justify-between">
+            <p className="underline">Forgot Password?</p>
+            <p className="underline">Create a new account</p>
+          </div>
+        </form>
+      </Form>
+    </Card>
+    </div>
   )
 }
