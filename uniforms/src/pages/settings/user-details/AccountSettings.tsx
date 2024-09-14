@@ -1,5 +1,5 @@
 import { CentredDiv } from "@/components/ui/centred-div"
-import { SettingsNext } from "@/components/ui/settings/settings-next"
+import {  SettingsNext } from "@/components/ui/settings/settings-next"
 import { Title } from "@/components/ui/title"
 
 function AccountSettings() {

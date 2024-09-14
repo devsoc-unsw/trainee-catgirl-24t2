@@ -11,7 +11,7 @@ export interface InputProps
 const Search = React.forwardRef<HTMLInputElement, InputProps>(
   ({ className, type, setState, ...props }, ref) => {
     return (
-      <div className="absolute w-96 items-end flex flex-col justify-center">
+      <div className="relative w-[700px] items-end flex flex-col justify-center">
         <input
           type={type}
           placeholder="Search"

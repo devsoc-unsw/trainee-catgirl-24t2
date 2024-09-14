@@ -4,10 +4,12 @@ import { ChevronRight } from 'lucide-react';
 
 interface CardProps {
   variant: string;
+  cardText: string;
+  societyText: string;
 }
 
-const SocietyCard: React.FC<CardProps> = ({ variant }) => {
-    return variant === "d" ?
+const SocietyCard: React.FC<CardProps> = ({ variant, cardText, societyText }) => {
+    return variant === "desktop" ?
       <Button
         /* Professional Figma Dev Mode user*/
         className="flex-grow flex flex-col justify-end items-center rounded-[20px] w-[20vw] max-w-[220px] h-[251px] hover:animate-scale"
@@ -18,10 +20,8 @@ const SocietyCard: React.FC<CardProps> = ({ variant }) => {
         }}
       >
         <div className="space-y-3 p-[10px]">
-        { /*Can add card text as an input later maybe*/ }
-        <p className="text-lg text-black">Card Text</p>
-        { /*Can add society text as an input later maybe*/ }
-        <p className="text-sm text-black">Society</p>
+        <p className="text-lg text-black flex text-wrap">{cardText}</p>
+        <p className="text-sm text-black">{societyText}</p>
         </div>
       </Button>
     :

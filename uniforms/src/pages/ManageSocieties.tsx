@@ -3,17 +3,17 @@ import { Page } from "@/components/ui/page"
 import { Title } from "@/components/ui/title"
 
 
-function Manage() {
+function ManageForms() {
     const { isDesktop } = screenDetector();
     return (
     <>
     {isDesktop && 
-        <Page type="main" variant="desktop" page={3}>
-            <Title text="Manage" type="title"/>
+        <Page type="main" variant="desktop" page={4}>
+            <Title text="Manage Societies" type="title"/>
         </Page>
     }
     </>
     )
 }
 
-export default Manage
+export default ManageForms
