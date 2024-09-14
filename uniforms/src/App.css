@@ -16,11 +16,11 @@
     --secondary: 0 0% 81%;
     --secondary-foreground: 0 0% 17%;
     --secondary-hover: 0 0% 76%;
-    --muted: 136 0% 93%;
+    --muted: 0 0% 96%;
     --muted-foreground: 264 7% 29%;
     --accent: 0 100% 89%;
     --accent-foreground: 222.2 47.4% 11.2%;
-    --destructive: 356 64% 47%;;
+    --destructive: 356 64% 47%;
     --destructive-foreground: 210 40% 98%;
     --destructive-hover: 356 64% 42%;
     --border: 0 0% 80%;
