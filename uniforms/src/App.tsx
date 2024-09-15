@@ -22,6 +22,7 @@ import SocietyView from "./pages/SocietyView";
 import ManageForms from "./pages/ManageForms";
 import ManageSocieties from "./pages/ManageSocieties";
 import ManageMembers from "./pages/ManageMembers";
+import SocietyManage from "./pages/SocietyManage";
 
 function App() {
   return (
@@ -46,7 +47,8 @@ function App() {
     <Route path="societies/view" element={<SocietyView />}/>
     <Route path="manageforms" element={<ManageForms />}/>
     <Route path="managesocieties" element={<ManageSocieties />}/>
-    <Route path="managesocieties/members" element={<ManageMembers />}/>
+    <Route path="managesocieties/view" element={<SocietyManage />}/>
+    <Route path="managesocieties/view/members" element={<ManageMembers />}/>
     <Route path="viewforms" element={<ViewForms />} />
 	</Routes>
      </BrowserRouter>
