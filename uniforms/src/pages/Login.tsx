@@ -39,14 +39,18 @@ export default function Login() {
   function onSubmit(values: z.infer<typeof formSchema>) {
     // Do something with the form values.
     // ✅ This will be type-safe and validated.
-    fetch("/authentication", {
-      method: "POST",
+    fetch("http://localhost:3000/authentication", {
+      method: "PUT",
       body: JSON.stringify({
         email: values.email,
-        password: values.password
-      })
+        password: values.password,
+      }),
+      headers: {
+        "Content-type": "application/json; charset=UTF-8"
+      }
     })
-    .then((response) => response.json())
+    // TODO: Remove debug message
+    .then((res) => res.json())
     .then((json) => console.log(json));
   }
 

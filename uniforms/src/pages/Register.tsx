@@ -47,7 +47,19 @@ export default function Register() {
   function onSubmit(values: z.infer<typeof formSchema>) {
     // Do something with the form values.
     // ✅ This will be type-safe and validated.
-    console.log(values)
+    fetch("http://localhost:3000/authentication", {
+      method: "POST",
+      body: JSON.stringify({
+        email: values.email,
+        password: values.password,
+      }),
+      headers: {
+        "Content-type": "application/json; charset=UTF-8"
+      }
+    })
+    // TODO: Remove debug message
+    .then((res) => res.text())
+    .then((text) => console.log(text));
   }
 
   return (
