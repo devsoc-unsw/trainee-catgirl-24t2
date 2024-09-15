@@ -20,7 +20,7 @@ const Title = ({ text, type, prev, className }: TitleProps) => {
         )
     } else if (type == "title-back") {
         return(
-            <div className="flex p-[20px] rounded-2xl items-center ">
+            <div className="ml-20 flex pt-5 rounded-2xl items-center ">
                 <Link to={`${prev}`} className={buttonVariants({ variant: "default" }) + "text-foreground hover:text-black"} >
                     <ChevronLeft className="grow-1 w-vw h-vh"></ChevronLeft>
                 </Link>

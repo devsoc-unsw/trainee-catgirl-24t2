@@ -23,6 +23,11 @@ function ViewForms () {
                 </div>
                 <div className="flex w-[80vw] justify-center overflow-auto hide-scrollbar h-[100vh]">
                     <CardGrid variant="desktop">
+                        <SocietyCard variant="desktop" cardText="Never gonna give you up" societyText="DevSocUNSW"></SocietyCard> 
+                        <SocietyCard variant="desktop" cardText="Never gonna let you down" societyText="DevSocUNSW"></SocietyCard> 
+                        <SocietyCard variant="desktop" cardText="Never gonna run around" societyText="DevSocUNSW"></SocietyCard> 
+                        <SocietyCard variant="desktop" cardText="And desert you" societyText="DevSocUNSW"></SocietyCard> 
+                        <SocietyCard variant="desktop" cardText="Never gonna make you cry" societyText="DevSocUNSW"></SocietyCard> 
                         <SocietyCard variant="desktop" cardText="Weekly Gaming Session with DevSoc" societyText="DevSocUNSW"></SocietyCard> 
                     </CardGrid>
                 </div>

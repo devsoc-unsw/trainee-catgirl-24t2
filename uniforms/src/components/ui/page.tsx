@@ -20,7 +20,7 @@ const Page = ({ children, type, variant, page }: { children: React.ReactNode, ty
                     <div className="w-[20%]">
                         <NavBar PageNum={page} variant = "desktop"></NavBar>
                     </div>
-                    <div className="w-[80%] p-[10px]">
+                    <div className="w-[80%]">
                         {children}
                     </div>
                 </div>
