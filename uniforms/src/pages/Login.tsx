@@ -91,7 +91,7 @@ export default function Login() {
             </Button>
           <div className="flex flex-row justify-between">
             <p className="underline">Forgot Password?</p>
-            <p className="underline">Create a new account</p>
+            <Link to="/register" className="font-normal underline text-foreground hover:text-foreground">Create a new account</Link>
           </div>
         </form>
       </Form>
