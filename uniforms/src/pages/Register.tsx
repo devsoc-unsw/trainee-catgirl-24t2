@@ -6,6 +6,7 @@ import { useForm } from "react-hook-form"
 import { z } from "zod"
 
 import { Button } from "@/components/ui/button"
+import { Link } from "react-router-dom"
 import {
   Form,
   FormControl,
@@ -121,7 +122,9 @@ export default function Register() {
             )}
           />
           <div className="mt-4">
-            <Button type="submit" className="w-[100%]"style={{ marginTop: '1rem' }}>Register</Button>
+            <Button type="submit" className="w-[100%]"style={{ marginTop: '1rem' }} asChild>
+              <Link to="/">Register</Link>
+            </Button>
           </div>
         </form>
       </Form>
