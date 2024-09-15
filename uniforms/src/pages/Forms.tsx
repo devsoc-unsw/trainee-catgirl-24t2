@@ -12,12 +12,13 @@ function Forms() {
 
   return (
     <>
-      <Block variant="short" prompt="Doomed???" />
-      <Block
-        variant="long"
-        prompt="Doomed???????"
-        description="why am I here just to have fun true"
-      />
+      <div className="flex items-center justify-center flex-col">
+          <Block variant="short" prompt="Doomed???" />
+          <Block
+            variant="long"
+            prompt="Doomed???????"
+            description="why am I here just to have fun true"
+          />
       <Block
         variant="radio"
         prompt="Doomed??????????????????"
@@ -41,20 +42,7 @@ function Forms() {
         prompt="Doomed???????"
         description="why am I here just to have fun true"
       />
-      <Dropdown
-        items={[
-          { value: "nya", label: "Me" },
-          { value: "uwu", label: "You" },
-          { value: "owo", label: "Us ❤️" },
-        ]}
-        category="cats"
-      />
-      <p>{uwu}</p>
-      <Button>aaah</Button>
-      <Button variant="destructive">danger ahead!!!</Button>
-      <Switch></Switch>
-      <Input />
-      <Search setState={owo} />
+      </div>
     </>
   );
 }
