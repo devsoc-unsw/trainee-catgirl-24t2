@@ -20,7 +20,7 @@ function Societies() {
     {isDesktop && 
         <Page type="main" variant="desktop" page={2}>
         <div className="flex flex-col h-[100%]">
-                <div className="flex flex-row justify-between p-[30px] items-center">
+                <div className="flex flex-row justify-between p-[80px] items-center">
                         <Search placeholder="Search societies" setState={setSearch}></Search>
                     <Dropdown items={[
                         { value: "All", label: "All"},
@@ -94,6 +94,7 @@ function Societies() {
                         </Link>
                         </div>
                     </div>
+
                 </div>
         </div>
         </Page>
