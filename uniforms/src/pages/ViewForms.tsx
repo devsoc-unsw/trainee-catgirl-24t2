@@ -28,6 +28,9 @@ function ViewForms () {
                         <SocietyCard variant="desktop" cardText="Never gonna run around" societyText="DevSocUNSW"></SocietyCard> 
                         <SocietyCard variant="desktop" cardText="And desert you" societyText="DevSocUNSW"></SocietyCard> 
                         <SocietyCard variant="desktop" cardText="Never gonna make you cry" societyText="DevSocUNSW"></SocietyCard> 
+                        <SocietyCard variant="desktop" cardText="Never gonna say goodbye" societyText="DevSocUNSW"></SocietyCard> 
+                        <SocietyCard variant="desktop" cardText="Never gonna tell a lie" societyText="DevSocUNSW"></SocietyCard> 
+                        <SocietyCard variant="desktop" cardText="And desert you" societyText="DevSocUNSW"></SocietyCard> 
                         <SocietyCard variant="desktop" cardText="Weekly Gaming Session with DevSoc" societyText="DevSocUNSW"></SocietyCard> 
                     </CardGrid>
                 </div>
