@@ -4,7 +4,7 @@ import { Card } from "@/components/ui/card"
 import { zodResolver } from "@hookform/resolvers/zod"
 import { useForm } from "react-hook-form"
 import { z } from "zod"
-
+import { Link } from "react-router-dom"
 import { Button } from "@/components/ui/button"
 import {
   Form,
@@ -86,7 +86,9 @@ export default function Login() {
               </FormItem>
             )}
           />
-          <Button type="submit" className="w-[100%]">Submit</Button>
+          <Button type="submit" className="w-[100%] hover:text-foreground" asChild>
+              <Link to="/viewforms">Submit</Link>
+            </Button>
           <div className="flex flex-row justify-between">
             <p className="underline">Forgot Password?</p>
             <p className="underline">Create a new account</p>

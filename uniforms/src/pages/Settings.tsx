@@ -39,8 +39,7 @@ function Settings() {
     }
     {isDesktop && 
         <Page type="main" variant="desktop" page={5}>
-            <Title text="Settings" type="title"/>
-            <div className="flex w-[100%] h-[90%]">
+            <div className="flex w-[100%] h-[90%] pt-10">
                 <div className="w-[300px] h-[90%] mt-5 ml-20 overflow-auto">
                     <div className="mr-7 flex flex-col items-center justify-center">
                     <Title text="Account Details" type="subtitle"></Title>
@@ -58,8 +57,6 @@ function Settings() {
                     <Title text="Support" type="subtitle"></Title>
                     <SettingsNext text={"Contact us"} next={"contact"} active={active} setActive={setActive} />
                     <SettingsNext text={"About"} next={"about"} active={active} setActive={setActive} />
-
-                    <a href="" className="pt-2 h-[10%] text-center text-foreground hover:text-black">Log out</a>
                     </div>
                 </div>
                 <div className="flex items-center justify-center w-[60%] h-[100%] p-2">

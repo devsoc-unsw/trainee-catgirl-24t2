@@ -47,7 +47,9 @@ const NavBar: React.FC<NavBarProps> = ( {PageNum, variant} ) => {
             {/* Bottom text and logout */}
             <div className="flex flex-col items-center gap-[20px]">
                 <p>Logged in as Potato</p>
-                <Button variant="destructive">Logout</Button>
+                <Button variant="destructive" className="hover:text-foreground" asChild>
+                    <Link to="/">Logout</Link>
+                </Button>
             </div>
         </div>
     :

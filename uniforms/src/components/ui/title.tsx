@@ -1,14 +1,14 @@
 import { ChevronLeft} from "lucide-react"
 import { Link } from "react-router-dom"
+import { buttonVariants } from "./button"
 
 import { cn } from "@/lib/utils";
-import React from "react";
 
 interface TitleProps {
     text: string;
     type: string;
     prev?: string;
-    className: string;
+    className?: string;
 }
 
 const Title = ({ text, type, prev, className }: TitleProps) => {
@@ -16,6 +16,15 @@ const Title = ({ text, type, prev, className }: TitleProps) => {
         return(
             <div className={cn("mx-auto container pt-5", className)}>
                 <h1 className= "text-center">{`${text}`}</h1>
+            </div>
+        )
+    } else if (type == "title-back") {
+        return(
+            <div className="ml-20 flex pt-5 rounded-2xl items-center ">
+                <Link to={`${prev}`} className={buttonVariants({ variant: "default" }) + "text-foreground hover:text-black"} >
+                    <ChevronLeft className="grow-1 w-vw h-vh"></ChevronLeft>
+                </Link>
+                <h1 className= "grow text-center h-10">{`${text}`}</h1>
             </div>
         )
     } else if (type == "subtitle") {

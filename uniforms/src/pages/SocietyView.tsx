@@ -8,18 +8,20 @@ import { ChevronLeft} from "lucide-react"
 import { Button } from "@/components/ui/button"
 import { SocietyBanner } from "@/components/ui/society-banner"
 import { Title } from "@/components/ui/title"
+import { Link } from "react-router-dom"
+import { buttonVariants } from "@/components/ui/button"
 
-function ViewForms () {
+function SocietyView () {
     const [search, setSearch] = useState("")
     return (
         <div className="flex flex-row h-[100vh]">
             <div className="w-20%"></div>
-            <NavBar PageNum={1} variant = "desktop"></NavBar>
+            <NavBar PageNum={2} variant = "desktop"></NavBar>
             <div className="flex flex-col items-center">
                 <div className="flex flex-row justify-between p-[30px] items-center ml-[80px] mr-[80px] gap-[30%] w-[80%]">
-                    <Button className="p-[20px] rounded-2xl items-center ">
-                        <ChevronLeft></ChevronLeft>
-                    </Button>
+                    <Link to={`${"/societies"}`} className={buttonVariants({ variant: "default" }) + "text-foreground hover:text-black"} >
+                        <ChevronLeft className="grow-1 w-vw h-vh"></ChevronLeft>
+                    </Link>
                     <Search placeholder="Search event" setState={setSearch}></Search>
                 </div>
                 <div className="overflow-auto hide-scrollbar flex flex-col items-center">
@@ -46,4 +48,4 @@ function ViewForms () {
     )
 }
 
-export default ViewForms
+export default SocietyView

@@ -18,15 +18,18 @@ import ContactUs from "./pages/settings/contact-us/ContactUs";
 import Faq from "./pages/settings/contact-us/Faq";
 import About from "./pages/settings/about/About";
 import Societies from "./pages/Societies";
+import SocietyView from "./pages/SocietyView";
 import ManageForms from "./pages/ManageForms";
 import ManageSocieties from "./pages/ManageSocieties";
+import ManageMembers from "./pages/ManageMembers";
+import SocietyManage from "./pages/SocietyManage";
 
 function App() {
   return (
      <BrowserRouter>
 	<Routes>
     <Route path="register" element={<Register />} />
-    <Route path="login" element={<Login />} />
+    <Route path="/" element={<Login />} />
 	  <Route path="forms" element={<Forms />} />
     <Route path="settings" element={<Settings />} />
     <Route path="settings/user" element={<UserDetails />} />
@@ -41,10 +44,12 @@ function App() {
     <Route path="settings/contact/faq" element={<Faq />} />
     <Route path="settings/about" element={<About />} />
     <Route path="societies" element={<Societies />}/>
+    <Route path="societies/view" element={<SocietyView />}/>
     <Route path="manageforms" element={<ManageForms />}/>
     <Route path="managesocieties" element={<ManageSocieties />}/>
+    <Route path="managesocieties/view" element={<SocietyManage />}/>
+    <Route path="managesocieties/view/members" element={<ManageMembers />}/>
     <Route path="viewforms" element={<ViewForms />} />
-    <Route path="societyview" element={<SocietyView />} />
 	</Routes>
      </BrowserRouter>
   );
